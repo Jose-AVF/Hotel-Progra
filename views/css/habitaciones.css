@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Encabezado */
+.encabezado {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 3px 12px rgba(0, 60, 80, 0.10);
+    position: relative;
+    z-index: 100;
+}
+
+/* Contenedor del menú */
+.menu {
+    max-width: 1200px;
+    min-height: 110px;
+    margin: 0 auto;
+    padding: 10px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Logo del hotel */
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Lista de navegación */
+.navegacion {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Enlaces */
+.navegacion a {
+    display: block;
+    text-decoration: none;
+    color: #123D56;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 14px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+.navegacion a:hover,
+.navegacion a.activo {
+    color: #ffffff;
+    background-color: #087F91;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 850px) {
+    .menu {
+        flex-direction: column;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .logo img {
+        width: 220px;
+    }
+
+    .navegacion {
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .navegacion a {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navegacion {
+        gap: 3px;
+    }
+
+    .navegacion a {
+        font-size: 13px;
+        padding: 9px 8px;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f8;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.contenedor-carruseles {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.carrusel {
+    flex: 1;
+    min-width: 0;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000018;
+    overflow: hidden;
+}
+
+.carrusel h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.pista {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.pista img {
+    width: 100%;
+    flex: 0 0 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.controles {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.controles button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.controles button:hover {
+    background: #1d4ed8;
+}
+
+/* Diseño adaptable para celulares */
+@media (max-width: 768px) {
+    .contenedor-carruseles {
+        flex-direction: column;
+    }
+
+    .carrusel {
+        width: 100%;
+    }
+}
