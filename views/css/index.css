@@ -1,8 +1,24 @@
-#hero{
-
+header {
+  background-color: #73c7c0;
 }
 
-#lugares_hotel{
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
 
-    
+.links {
+  display: flex;
+  gap: 50px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #222020;
+}
+
+.links a:hover {
+  color: #939c2c;
 }
