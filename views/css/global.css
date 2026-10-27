@@ -1,0 +1,26 @@
+header {
+    background-color: #73c7c0;
+}
+
+header>nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.links {
+    display: flex;
+    gap: 50px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #222020;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
