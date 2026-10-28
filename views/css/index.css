@@ -1,0 +1,26 @@
+body{
+  margin: 0px;
+}
+
+#hero>div>h1{
+  display: flex;
+  justify-content: center;
+}
+
+#hero>div>h2{
+  display: flex;
+  justify-content: center;
+}
+
+#hero>div>p{
+  display: flex;
+  justify-content: center;
+}
+
+#hero>h1{
+  
+}
+
+.degradado img{
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
