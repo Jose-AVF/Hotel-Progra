@@ -1,26 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
 body{
   margin: 0px;
 }
 
 #hero>div>h1{
   display: flex;
-  justify-content: center;
+  margin: 5px 1px 1px 20px;
+  justify-content:left;
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 50%;
 }
 
-#hero>div>h2{
+#hero>div>h3{
   display: flex;
-  justify-content: center;
+  margin: 15px 1px 1px 20px;
+  justify-content: left;
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 50%;
 }
 
 #hero>div>p{
   display: flex;
-  justify-content: center;
+  margin: 15px 1px 1px 20px;
+  justify-content: left;
+  max-width: 50%;
 }
 
-#hero>h1{
-  
+.aparte{
+  flex: 1;
+  min-width: 300px;
+}
+
+.aparte img{
+  filter: none;
+  transform: none;
+  max-width: 15%;
+  height: auto;
 }
 
 .degradado img{
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.contenedor-principal {
+  display: flex;
+  align-items: flex-start; /* Los alinea arriba para que guarden armonía con el título */
+  justify-content: space-between;
+  gap: 40px; /* Espacio entre el texto y el aside */
+  flex-wrap: wrap; /* Se adapta bien a pantallas pequeñas */
 }
