@@ -31,6 +31,14 @@ body{
   max-width: 50%;
 }
 
+.alinearDerecha div aside{
+  display: flex;
+  justify-content: right;
+  align-content: end;
+  align-items: end;
+  justify-items: end;
+}
+
 .aparte{
   flex: 1;
   min-width: 300px;
@@ -44,13 +52,15 @@ body{
 }
 
 .degradado img{
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+  width: 100%;
+  max-width: 100%;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
 .contenedor-principal {
   display: flex;
-  align-items: flex-start; /* Los alinea arriba para que guarden armonía con el título */
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 40px; /* Espacio entre el texto y el aside */
-  flex-wrap: wrap; /* Se adapta bien a pantallas pequeñas */
+  gap: 40px;
+  flex-wrap: wrap;
 }
