@@ -1,17 +1,35 @@
-header {
+header{
     background-color: #73c7c0;
+    display: flex;
+    justify-content: end;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
-header>nav{
+header nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header nav img{
+    max-height: 150px;
+    width: auto;
 }
 
 .links {
     display: flex;
-    gap: 50px;
+    gap: 30px;
+    align-items: end;
+    flex-wrap: wrap;
+    white-space: nowrap;
 }
 
 .links a {
@@ -24,3 +42,10 @@ header>nav{
     text-decoration-thickness: 2px;
     text-underline-offset: 5px;
 }
+
+.alturaBarra{
+    display: flex;
+    min-height: 25px;
+}
+
+/*#73c7c0*/
