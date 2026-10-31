@@ -12,14 +12,14 @@ body {
 /* Encabezado */
 .encabezado {
     width: 100%;
-    background-color: #ffffff;
+    background-color: #73c7c0;
     box-shadow: 0 3px 12px rgba(0, 60, 80, 0.10);
     position: relative;
     z-index: 100;
 }
 
 /* Contenedor del menú */
-.menu {
+.navbar {
     max-width: 1200px;
     min-height: 110px;
     margin: 0 auto;
@@ -46,7 +46,7 @@ body {
 }
 
 /* Lista de navegación */
-.navegacion {
+.links {
     list-style: none;
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@ body {
 }
 
 /* Enlaces */
-.navegacion a {
+.links a {
     display: block;
     text-decoration: none;
     color: #123D56;
@@ -193,4 +193,27 @@ h1 {
     .carrusel {
         width: 100%;
     }
+}
+.contenedor-boton {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilo para que el enlace parezca un botón interactivo */
+.boton-enlace {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff; /* Color azul */
+  color: white;
+  text-decoration: none; /* Quita el subrayado del enlace */
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto visual al pasar el cursor */
+.boton-enlace:hover {
+  background-color: #0056b3;
 }
