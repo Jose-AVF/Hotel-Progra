@@ -5,39 +5,10 @@ body{
   max-width: 100%;
 }
 
-#hero>h1{
-  display: flex;
-  margin: 5px 1px 1px 20px;
-  justify-content:left;
-  font-family: "Cal Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  max-width: 50%;
-}
-
-#hero>h3{
-  display: flex;
-  margin: 15px 1px 1px 20px;
-  justify-content: left;
-  font-family: "Cal Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  max-width: 50%;
-}
-
-#hero>p{
-  display: flex;
-  margin: 15px 1px 1px 20px;
-  justify-content: left;
-  max-width: 50%;
-}
-
 .alinearDerecha{
   display: flex;
   justify-content: right;
   align-content: end;
-  /*align-items: end;*/
-  /*justify-items: end;*/
 }
 
 .aparte{
@@ -64,4 +35,9 @@ body{
   justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
+}
+
+.maximo45{
+  display: flex;
+  max-width: 45%;
 }

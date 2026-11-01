@@ -48,4 +48,14 @@ header nav img{
     min-height: 25px;
 }
 
+.volumenIcono{
+    width: 200px;
+    height: 300px;
+    margin: 0%;
+}
+
+.volumenIcono img{
+    width: 75px;
+    height: 75px; 
+}
 /*#73c7c0*/
