@@ -217,3 +217,69 @@ h1 {
 .boton-enlace:hover {
   background-color: #0056b3;
 }
+/* FOOTER */
+.footer-hotel {
+    background-color: #143e68;
+    color: white;
+    padding: 30px 0 20px;
+    border-top: 3px solid #d4a017;
+}
+
+.footer-hotel h5 {
+    color: #d4a017;
+    margin-bottom: 15px;
+}
+
+.footer-hotel p {
+    font-size: 13px;
+    color: #ddd;
+}
+
+.footer-hotel hr {
+    border-color: #d4a017;
+}
+
+/* REDES SOCIALES */
+.redes a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    background: #d4a017;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    background: white;
+    color: #212529;
+    transform: translateY(-3px);
+}
+
+/* ANIMACION */
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CELULARES */
+@media (max-width: 576px) {
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .navbar-hotel .nav-link {
+        margin-left: 0;
+    }
+}
