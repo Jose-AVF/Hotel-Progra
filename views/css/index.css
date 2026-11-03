@@ -23,10 +23,14 @@ body{
   height: auto;
 }
 
-.degradado img{
+.degradadoImagen img{
   max-width: 100%;
   min-width: 100%;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.degradadoColorCentroArriba{
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(138, 184, 184) 100%); 
 }
 
 .contenedor-principal {
