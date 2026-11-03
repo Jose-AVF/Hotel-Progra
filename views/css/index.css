@@ -41,3 +41,8 @@ body{
   display: flex;
   max-width: 45%;
 }
+
+.margenIzquierda{
+  display: flex;
+  margin-left: 10px;
+}
