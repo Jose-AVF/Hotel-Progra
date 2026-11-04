@@ -1,26 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
 body{
   margin: 0px;
+  max-width: 100%;
 }
 
-#hero>div>h1{
+.alinearDerecha{
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  align-content: end;
 }
 
-#hero>div>h2{
+.aparte{
+  flex: 1;
+  min-width: 300px;
+}
+
+.aparte img{
+  filter: none;
+  transform: none;
+  max-width: 15%;
+  height: auto;
+}
+
+.degradadoImagen img{
+  max-width: 100%;
+  min-width: 100%;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.degradadoColorCentroArriba{
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(138, 184, 184) 100%); 
+}
+
+.contenedor-principal {
   display: flex;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-#hero>div>p{
+.maximo45{
   display: flex;
-  justify-content: center;
+  max-width: 45%;
 }
 
-#hero>h1{
-  
-}
-
-.degradado img{
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+.margenIzquierda{
+  display: flex;
+  margin-left: 10px;
 }
