@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- lang="es" le dice al navegador que la página está en español -->
+<html lang="es">
+    <head>
+        <!-- UTF-8 para que se vean bien las tildes, la ñ y el símbolo ₡ -->
+        <meta charset="UTF-8">
+        <!-- Esto hace que la página se adapte al tamaño de la pantalla -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS del equipo para el menú de arriba (../ para salir de la carpeta html) -->
+        <link rel="stylesheet" href="../css/global.css">
+        <!-- Mi CSS del dashboard -->
+        <link rel="stylesheet" href="../css/dashboard.css">
+        <!-- Lo que sale en la pestaña del navegador -->
+        <title>Dashboard - Hotel Playa Blanca</title>
+        <!-- El iconito de la pestaña, es el círculo del logo recortado -->
+        <link rel="icon" type="image/png" href="../img/icono.png">
+    </head>
+    <body>
+        <!-- ===== MENÚ DE ARRIBA ===== -->
+        <!-- Es el mismo menú del index para que todas las páginas se vean iguales -->
+        <header>
+            <nav class="navbar">
+                <img src="../img/Logo_Hotel.png" alt="Logo Hotel Playa Blanca" width="300">
+                <div class="links">
+                    <!-- ../../ porque el index está dos carpetas más arriba -->
+                    <a href="../../index.html">Inicio</a>
+                    <!-- Estas están en la misma carpeta, por eso ./ -->
+                    <a href="./habitaciones.html">Habitaciones</a>
+                    <a href="./form.html">Reservación</a>
+                    <a href="./dashboard.html">Información</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- ===== CONTENIDO ===== -->
+        <main class="dashboard">
+            <h1>Panel de administración</h1>
+            <!-- La fecha de hoy, todos los datos de abajo son de este día -->
+            <p class="fecha">Jueves 29 de octubre, 2026</p>
+
+            <!-- ===== TARJETAS ===== -->
+            <!-- Los números salen del mapa de habitaciones de abajo -->
+            <section class="tarjetas">
+                <div class="tarjeta">
+                    <h3>Ocupación</h3>
+                    <!-- 7 ocupadas de 12 habitaciones = 58% -->
+                    <p class="numero">58%</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Huéspedes</h3>
+                    <!-- 6 estándar/deluxe ocupadas x 2 personas + 1 familiar x 4 = 16 -->
+                    <p class="numero">16</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Libres</h3>
+                    <p class="numero">3</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Llegadas hoy</h3>
+                    <p class="numero">3</p>
+                </div>
+            </section>
+
+            <!-- ===== MAPA DE HABITACIONES ===== -->
+            <!-- Un cuadrito por habitación, el color dice cómo está -->
+            <!-- Los 3 tipos salen de la página de habitaciones, los números de cuarto son de ejemplo -->
+            <section class="caja">
+                <h2>Mapa de habitaciones</h2>
+
+                <!-- Leyenda para saber qué significa cada color -->
+                <p class="leyenda">
+                    <span class="punto libre"></span> Libre
+                    <span class="punto ocupada"></span> Ocupada
+                    <span class="punto limpieza"></span> En limpieza
+                </p>
+
+                <!-- Piso 1: Estándar, para 2 adultos -->
+                <h4>Estándar · 2 adultos</h4>
+                <div class="habitaciones">
+                    <div class="hab ocupada">101</div>
+                    <div class="hab libre">102</div>
+                    <div class="hab ocupada">103</div>
+                    <div class="hab ocupada">104</div>
+                    <div class="hab limpieza">105</div>
+                    <div class="hab libre">106</div>
+                </div>
+
+                <!-- Piso 2: Deluxe, para 2 adultos con cama doble -->
+                <h4>Deluxe · 2 adultos</h4>
+                <div class="habitaciones">
+                    <div class="hab ocupada">201</div>
+                    <div class="hab ocupada">202</div>
+                    <div class="hab limpieza">203</div>
+                    <div class="hab ocupada">204</div>
+                </div>
+
+                <!-- Piso 3: Familiar, para 4 adultos -->
+                <h4>Familiar · 4 adultos</h4>
+                <div class="habitaciones">
+                    <div class="hab ocupada">301</div>
+                    <div class="hab libre">302</div>
+                </div>
+            </section>
+
+            <!-- ===== LLEGADAS Y SALIDAS DE HOY ===== -->
+            <!-- Dos cajas una al lado de la otra -->
+            <section class="dos-columnas">
+                <!-- Los que hacen check-in hoy (nombres y horas de ejemplo) -->
+                <div class="caja">
+                    <h2>Llegadas de hoy</h2>
+                    <ul>
+                        <li><b>María Rodríguez</b> · Hab. 201 · 3:00 pm</li>
+                        <li><b>Familia Solano</b> · Hab. 301 · 3:00 pm</li>
+                        <li><b>Jorge Castro</b> · Hab. 104 · 4:30 pm</li>
+                    </ul>
+                </div>
+                <!-- Los que se van hoy, por eso su habitación está en limpieza -->
+                <div class="caja">
+                    <h2>Salidas de hoy</h2>
+                    <ul>
+                        <li><b>Laura Gómez</b> · Hab. 203 · 11:00 am</li>
+                        <li><b>Pedro Ramírez</b> · Hab. 105 · 12:00 md</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ===== ACTIVIDADES DE HOY ===== -->
+            <!-- Las actividades del hotel que salen en el index, con cuántos se apuntaron -->
+            <section class="caja">
+                <h2>Actividades de hoy</h2>
+                <table>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Actividad</th>
+                        <th>Inscritos</th>
+                    </tr>
+                    <tr>
+                        <td>8:00 am</td>
+                        <td>Kayak</td>
+                        <td>6 / 8</td>
+                    </tr>
+                    <tr>
+                        <td>9:00 am</td>
+                        <!-- El parque está a 500 metros del hotel -->
+                        <td>Senderismo al Parque Nacional Manuel Antonio</td>
+                        <td>10 / 12</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 am</td>
+                        <td>Spa y masajes</td>
+                        <!-- Si ya no hay campo, lo pinto de rojo con la clase lleno -->
+                        <td class="lleno">4 / 4 · Lleno</td>
+                    </tr>
+                    <tr>
+                        <td>1:00 pm</td>
+                        <td>Snorkel</td>
+                        <td>3 / 8</td>
+                    </tr>
+                    <tr>
+                        <td>4:00 pm</td>
+                        <td>Voleibol de playa</td>
+                        <td>5 / 12</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- ===== TABLA DE RESERVAS ===== -->
+            <!-- Las últimas reservas que entraron (para los próximos días) -->
+            <section class="caja">
+                <h2>Reservas recientes</h2>
+                <table>
+                    <!-- Primera fila: los títulos (th) -->
+                    <tr>
+                        <th>Huésped</th>
+                        <th>Habitación</th>
+                        <th>Llegada</th>
+                        <th>Salida</th>
+                        <th>Estado</th>
+                    </tr>
+                    <!-- Las demás filas: los datos (td) -->
+                    <tr>
+                        <td>María Rodríguez</td>
+                        <td>Deluxe 201</td>
+                        <td>29/10/2026</td>
+                        <td>02/11/2026</td>
+                        <!-- La clase le pone el color al estado (verde, naranja o rojo) -->
+                        <td class="confirmada">Confirmada</td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Jiménez</td>
+                        <td>Familiar 302</td>
+                        <td>30/10/2026</td>
+                        <td>03/11/2026</td>
+                        <td class="pendiente">Pendiente</td>
+                    </tr>
+                    <tr>
+                        <td>Ana Vargas</td>
+                        <td>Estándar 102</td>
+                        <td>31/10/2026</td>
+                        <td>01/11/2026</td>
+                        <td class="confirmada">Confirmada</td>
+                    </tr>
+                    <tr>
+                        <td>Luis Mora</td>
+                        <td>Estándar 106</td>
+                        <td>01/11/2026</td>
+                        <td>04/11/2026</td>
+                        <td class="cancelada">Cancelada</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+    </body>
+</html>
