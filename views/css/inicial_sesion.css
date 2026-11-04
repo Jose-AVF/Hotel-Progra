@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+ li{
+    width: fit-content;
+    margin: auto;
+    }
+
+/* Encabezado */
+.encabezado {
+    width: 100%;
+    background-color: #73c7c0;
+    box-shadow: 0 3px 12px rgba(0, 60, 80, 0.10);
+    position: relative;
+    z-index: 100;
+}
+
+/* Contenedor del menú */
+.navbar {
+    max-width: 1200px;
+    min-height: 110px;
+    margin: 0 auto;
+    padding: 10px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Logo del hotel */
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Lista de navegación */
+.links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Enlaces */
+.links a {
+    display: block;
+    text-decoration: none;
+    color: #123D56;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 14px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+.navegacion a:hover,
+.navegacion a.activo {
+    color: #ffffff;
+    background-color: #087F91;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 850px) {
+    .menu {
+        flex-direction: column;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .logo img {
+        width: 220px;
+    }
+
+    .navegacion {
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .navegacion a {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navegacion {
+        gap: 3px;
+    }
+
+    .navegacion a {
+        font-size: 13px;
+        padding: 9px 8px;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONTENEDOR DEL LOGIN */
+.contenido-login {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url('assets/img/hotel-lobby.jpg') no-repeat center center/cover;
+}
+
+/* TARJETA LOGIN */
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffffee;
+    padding: 35px 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    animation: fade 0.7s ease;
+}
+
+.hotel-title {
+    font-weight: 800;
+    font-size: 28px;
+    text-align: center;
+    color: #212529;
+}
+
+.hotel-title span {
+    color: #d4a017;
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+}
+
+.form-control:focus {
+    border-color: #d4a017;
+    box-shadow: 0 0 0 0.15rem rgba(212,160,23,.35);
+}
+
+/* BOTON */
+.btn-login {
+    background-color: #d4a017;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 11px;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #b88b11;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ERROR */
+#error {
+    background: #dc3545;
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* FOOTER */
+.footer-hotel {
+    background-color: #1d3954;
+    color: white;
+    padding: 30px 0 20px;
+    border-top: 3px solid #d4a017;
+}
+
+.footer-hotel h5 {
+    color: #d4a017;
+    margin-bottom: 15px;
+}
+
+.footer-hotel p {
+    font-size: 13px;
+    color: #ddd;
+}
+
+.footer-hotel hr {
+    border-color: #d4a017;
+}
+
+/* REDES SOCIALES */
+.redes a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    background: #d4a017;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    background: white;
+    color: #212529;
+    transform: translateY(-3px);
+}
+
+/* ANIMACION */
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CELULARES */
+@media (max-width: 576px) {
+    .login-card {
+        padding: 25px 20px;
+    }
+
+    .navbar-hotel .nav-link {
+        margin-left: 0;
+    }
+}
