@@ -1,0 +1,217 @@
+/* ===== PÁGINA EN GENERAL ===== */
+body {
+  margin: 0;                       /* quita el espacio blanco de los bordes */
+  font-family: Arial, sans-serif;  /* tipo de letra */
+  background-color: #f4f8f8;       /* fondo gris clarito */
+}
+
+/* Caja que tiene todo el contenido */
+.dashboard {
+  max-width: 1000px;  /* que no se estire mucho en pantallas grandes */
+  margin: 0 auto;     /* auto a los lados = lo centra */
+  padding: 30px;      /* espacio por dentro */
+}
+
+.dashboard h1 {
+  margin-bottom: 0;  /* pego el título a la fecha */
+}
+
+/* La fecha debajo del título */
+.fecha {
+  margin-top: 5px;
+  color: gray;
+}
+
+/* ===== TARJETAS ===== */
+/* flex pone las tarjetas una al lado de la otra */
+.tarjetas {
+  display: flex;
+  gap: 20px;          /* espacio entre tarjetas */
+  margin-bottom: 30px;
+}
+
+.tarjeta {
+  flex: 1;                         /* todas las tarjetas del mismo ancho */
+  background-color: white;
+  border-top: 5px solid #73c7c0;   /* rayita turquesa arriba (el color del header) */
+  border-radius: 10px;             /* esquinas redondeadas */
+  padding: 15px;
+  text-align: center;
+}
+
+/* Título pequeño de la tarjeta */
+.tarjeta h3 {
+  margin: 0;
+  color: gray;
+}
+
+/* El número grande */
+.numero {
+  margin: 10px 0 0;
+  font-size: 32px;
+  font-weight: bold;
+  color: #3a9b93;  /* turquesa más oscuro para que se lea bien */
+}
+
+/* ===== CAJA BLANCA DE LA TABLA ===== */
+.caja {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;  /* espacio entre una caja y la otra */
+}
+
+.caja h2 {
+  margin-top: 0;  /* quito el espacio de arriba del título */
+}
+
+/* ===== MAPA DE HABITACIONES ===== */
+/* Títulos de cada piso (Estándar, Deluxe, Familiar) */
+.caja h4 {
+  margin: 15px 0 8px;
+  color: gray;
+}
+
+/* La fila de cuadritos de cada piso */
+.habitaciones {
+  display: flex;
+  flex-wrap: wrap;  /* si no caben en una línea se bajan */
+  gap: 10px;
+}
+
+/* Cada cuadrito con el número de habitación */
+.hab {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  /* estas 3 líneas centran el número dentro del cuadrito */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Colores de cada estado (los uso en los cuadritos y en la leyenda) */
+.libre {
+  background-color: #4caf50;  /* verde */
+}
+
+.ocupada {
+  background-color: #e57373;  /* rojo suave */
+}
+
+.limpieza {
+  background-color: #f4b942;  /* amarillo */
+}
+
+/* ===== LEYENDA ===== */
+.leyenda {
+  color: gray;
+}
+
+/* Las bolitas de color de la leyenda */
+.punto {
+  display: inline-block;  /* para que el span pueda tener ancho y alto */
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;     /* 50% = círculo */
+  margin-left: 12px;
+}
+
+/* ===== LLEGADAS Y SALIDAS ===== */
+/* Pone las dos cajas una al lado de la otra */
+.dos-columnas {
+  display: flex;
+  gap: 20px;
+}
+
+/* Cada caja agarra la mitad */
+.dos-columnas .caja {
+  flex: 1;
+}
+
+/* Las listas de llegadas y salidas */
+.caja ul {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 2;  /* más espacio entre cada persona */
+}
+
+/* ===== TABLA ===== */
+table {
+  width: 100%;                /* ocupa todo el ancho de la caja */
+  border-collapse: collapse;  /* para que las líneas no salgan dobles */
+}
+
+/* th = títulos, td = datos */
+th, td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;  /* una línea abajo para separar filas */
+}
+
+th {
+  color: gray;
+}
+
+/* ===== COLORES DE LOS ESTADOS ===== */
+.confirmada {
+  color: green;
+  font-weight: bold;
+}
+
+.pendiente {
+  color: orange;
+  font-weight: bold;
+}
+
+.cancelada {
+  color: red;
+  font-weight: bold;
+}
+
+/* Cuando una actividad ya no tiene campo */
+.lleno {
+  color: red;
+  font-weight: bold;
+}
+
+/* ===== CELULAR ===== */
+/* Todo lo de aquí adentro solo pasa si la pantalla mide 600px o menos */
+@media (max-width: 600px) {
+
+  /* Menos espacio en los bordes para que quepa más contenido */
+  .dashboard {
+    padding: 15px;
+  }
+
+  /* Dejo que las tarjetas se bajen de línea */
+  .tarjetas {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* 2 tarjetas por fila: la mitad menos un poquito por el gap */
+  .tarjeta {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  /* Número un poco más pequeño para que no se vea gigante */
+  .numero {
+    font-size: 26px;
+  }
+
+  /* Llegadas y salidas una debajo de la otra */
+  .dos-columnas {
+    flex-direction: column;
+    gap: 0;  /* la caja ya tiene margin-bottom, no ocupo más espacio */
+  }
+
+  /* La tabla se puede deslizar de lado con el dedo */
+  table {
+    display: block;       /* para que la tabla acepte el overflow */
+    overflow-x: auto;     /* si no cabe, aparece la barrita para deslizar */
+    white-space: nowrap;  /* que el texto no se parta en varias líneas */
+  }
+}
