@@ -29,8 +29,12 @@ body{
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
-.degradadoColorCentroArriba{
-  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(138, 184, 184) 100%); 
+.degradadoCentral{
+  background-image: linear-gradient(rgba(255,0,0,0), rgb(138, 184, 184)50%,rgb(138, 184, 184), rgba(255,0,0,0)25%); 
+}
+
+.degradadoColor{
+  background-image: repeating-linear-gradient( rgba(138, 184, 184,0),rgb(138, 184, 184,1), rgb(138, 184, 184,1),rgb(138, 184, 184,1),rgba(138, 184, 184,0)); 
 }
 
 .contenedor-principal {
