@@ -54,3 +54,19 @@ body{
   display: flex;
   margin-left: 10px;
 }
+
+.margenItems{
+  display: flex;
+  margin: 2px 10px 10px 10px;
+}
+
+ul.lista-derecha li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    ul.lista-derecha li::after {
+      content: "•";
+      font-size: 25px;
+    }
