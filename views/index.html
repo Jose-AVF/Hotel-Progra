@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/global.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilos.css">
         <title>Hotel Playa Blanca</title>
     </head>
     <body>
@@ -79,39 +80,44 @@
                 </div>
             </section>
             <section id="lugares_hotel">
-                <br>
                 <div class="margenItems">
-                    <h1><i>Algunos de nuestros servicios</i></h1>
+                    <h1 class="tituloCentrado"><i>Algunos de nuestros servicios</i></h1>
                 </div>
                 <div class="degradadoColor">
-                    <div class="row">
-                        <div class="col align-self-start margenItems">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 margenImagenIzquierda">
                             <img src="img/fotos-hotel/volleyball.png" alt="Volleyball de Playa">
                         </div>
-                        <div class="col align-self-center">
+                        <div class="col-md-6 margenImagenIzquierda">
                             <h2>Disfrute de zonas de recreación</h2>
                             <p>Contamos con espacios recreativos ideales para compartir, entre ellos:</p>
-                            <ul class="lista-derecha">
-                                <li>Voleibol de playa</li>
-                                <li>Senderos para caminatas </li>
-                                <li>Área de juegos para los más pequeños</li>
-                                <li>Gimnasio totalmente equipado</li>
-                                <li>Campo de mini golf</li>
-                            </ul>
+                                <ul>
+                                    <li>Voleibol de playa</li>
+                                    <li>Senderos para caminatas </li>
+                                    <li>Área de juegos para los más pequeños</li>
+                                    <li>Gimnasio totalmente equipado</li>
+                                    <li>Campo de mini golf</li>
+                                </ul>
                         </div>
-                    </div>                   
-                        <article>
-                            <img src="img/fotos-hotel/mesa_comidas.png" alt="Mesa con comidas">
+                    </div>
+                </div> 
+                <div class="degradadoColor">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 margenImagenDerecha">
                             <h2>Comidas deliciosas</h2>
                             <p>
                                 Ponemos a disposición una amplia selección de platillos que nuestros diversos restaurantes ofrecen. Tenemos opciones
                                 para todos los gustos esto gracias a la alta calidad de chefs que disponemos y a la frescura de los ingredientes que
                                 utilizamos, directamente de la región.
                             </p>
-                    
-                        </article>
+                        </div>
+                        <div class="col-md-6 margenImagenDerecha">
+                            <img src="img/fotos-hotel/mesa_comidas.png" class="rounded float-end img-fluid" alt="Mesa con comidas">
+                        </div>
+                    </div>
+                </div>                
                         <article>
-                            <img src="img/fotos-hotel/piscina.png" alt="Piscina del hotel">
+                            <img src="img/fotos-hotel/piscina.png"  alt="Piscina del hotel">
                             <h2>Piscina disponible para personas de todos los edades</h2>
                             <p> 
                                 Nuestra piscina es una de las principales atracciones de nuestro hotel y además es una de las más grandes del área
@@ -127,7 +133,6 @@
                                 y bienestar inolvidable. Todo dentro de un entorno sereno y acogedor, pensado para desconectar del estrés diario.
                             </p>
                         </article>         
-                </div>
             </section>
         </main>
         <footer>
