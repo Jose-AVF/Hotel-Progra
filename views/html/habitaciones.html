@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +9,36 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-   <link rel="stylesheet" href="../css/habitaciones.css">
+    <link rel="stylesheet" href="../css/habitaciones.css">
 
     <style>
         /* ESTILOS EXISTENTES */
         .borde {
             border: 1px solid black;
         }
+
         .col-6 {
             margin-left: auto;
             margin-right: auto;
         }
+
         h2 {
             text-align: center;
             color: var(--blue-700);
             font-size: 2rem;
             margin-bottom: 28px;
         }
-        h4{
+
+        h4 {
             text-align: center;
         }
-        li{
-         width: fit-content;
-         margin: auto;
+
+        li {
+            width: fit-content;
+            margin: auto;
         }
-        .carrusel{
+
+        .carrusel {
             background-color: aquamarine;
         }
     </style>
@@ -42,185 +48,187 @@
 <body>
     <header class="encabezado">
         <nav class="navbar">
-                <img src="../img/Logo_Hotel.png" alt="Logo Hotel Playa Blanca" width="300">
+            <img src="../img/Logo_Hotel.png" alt="Logo Hotel Playa Blanca" width="300">
 
-                <div class="links">
-                    <a href="../../index.html">Inicio</a>
-                    <a href="./form.html">Reservación</a>
-                    <a href="#lugares_hotel">Servicios</a>
-                    <a href="./dashboard.html">Información</a>
-                    <a href="#contactanos">Contacto</a>
-                    <a href="./inicial_sesion.html">Iniciar Sesión</a>
-                </div>
-            </nav>
+            <div class="links">
+                <a href="../../index.html">Inicio</a>
+                <a href="./form.html">Reservación</a>
+                <a href="#lugares_hotel">Servicios</a>
+                <a href="./dashboard.html">Información</a>
+                <a href="#contacto">Contacto</a>
+                <a href="./inicial_sesion.html">Iniciar Sesión</a>
+            </div>
+        </nav>
     </header>
     <main>
         <section id="titulo_habi">
-        <br>
-        <h2>Nuestras habitaciones</h2>
-       </section>
-
-           <div class="contenedor-carruseles">
-
-        <!-- Carrusel 1 -->
-        <div class="carrusel">
-            <h2>Habitacion Estandar</h2>
-            <div class="pista">
-                <img src="../img/Habitacion/Estandar/Estandar_1.jpg" alt="estandar_1">
-                <img src="../img/Habitacion/Estandar/Estandar_2.jpg" alt="estandar_2">
-                <img src="../img/Habitacion/Estandar/Estandar_3.jpg" alt="estandar_3">
-            </div>
-            <div class="controles">
-                <button onclick="mover(0, -1)">❮</button>
-                <button onclick="mover(0, 1)">❯</button>
-            </div>
             <br>
-            <h4>Caracteristicas</h4>
-            <li>2 adultos</li>
-            <li>1 cama matrimonial o 2 camas individuales</li>
-            <li>Wifi</li>
-            <li>Ducha</li>
-            <li>Secador de pelo</li>
-            <li>Articulos de aseo gratuito</li>
-            <li>Aire acondicionado</li>
-            <li>Televisor de pantalla plana</li>
-            <li>Minibar</li>
-            <li>Caja fuerte</li>
-            <br><br>
-              <div class="contenedor-boton">
-            <a href="./form.html" class="boton-enlace">Reservar</a>
-             </div>
-        </div>
+            <h2>Nuestras habitaciones</h2>
+        </section>
 
-        <!-- Carrusel 2 -->
-        <div class="carrusel">
-            <h2>Habitacion Deluxe</h2>
-            <div class="pista">
-                <img src="../img/Habitacion/Deluxe/Deluxe_1.jpg" alt="deluxe_1">
-                <img src="../img/Habitacion/Deluxe/Deluxe_2.jpg" alt="deluxe_2">
-                <img src="../img/Habitacion/Deluxe/Delixe_3.jpg" alt="deluxe_3">
-                <img src="../img/Habitacion/Deluxe/Deluxe_4.jpg" alt="deluxe_4">
-            </div>
-            <div class="controles">
-                <button onclick="mover(1, -1)">❮</button>
-                <button onclick="mover(1, 1)">❯</button>
-            </div>
-            <br>
-            <h4>Caracteristicas</h4>
-            <li>2 adultos</li>
-            <li>1 cama doble</li>
-            <li>Wifi</li>
-            <li>Ducha</li>
-            <li>Secador de pelo</li>
-            <li>Articulos de aseo gratuito</li>
-            <li>Aire acondicionado</li>
-            <li>Televisor de pantalla plana</li>
-            <li>Minibar</li>
-            <li>Caja fuerte</li>
-            <br><br>
-             <div class="contenedor-boton">
-            <a href="./form.html" class="boton-enlace">Reservar</a>
-             </div>
-        </div>
+        <div class="contenedor-carruseles">
 
-        <!-- Carrusel 3 -->
-        <div class="carrusel">
-            <h2>Habitacion Familiar</h2>
-            <div class="pista">
-                <img src="../img/Habitacion/Familiar/Familiar_1.jpg" alt="familiar_1">
-                <img src="../img/Habitacion/Familiar/Familiar_2.jpg" alt="familiar_2">
-                <img src="../img/Habitacion/Familiar/Familiar_3.jpg" alt="familiar_3">
-                <img src="../img/Habitacion/Familiar/Familiar_4.jpg" alt="familiar_4">
-                <img src="../img/Habitacion/Familiar/Familiar_5.jpg" alt="familiar_5">
-            </div>
-            <div class="controles">
-                <button onclick="mover(2, -1)">❮</button>
-                <button onclick="mover(2, 1)">❯</button>
-            </div>
-            <br>
-             <h4>Caracteristicas</h4>
-            <li>4 adultos</li>
-            <li>1 cama matrimonial + 1 litera</li>
-            <li>Wifi</li>
-            <li>Ducha</li>
-            <li>Secador de pelo</li>
-            <li>Articulos de aseo gratuito</li>
-            <li>Aire acondicionado</li>
-            <li>Televisor de pantalla plana</li>
-            <li>Minibar</li>
-            <li>Caja fuerte</li>
-             <br><br>
-              <div class="contenedor-boton">
-            <a href="./form.html" class="boton-enlace">Reservar</a>
-             </div>
-        </div>
-    </div>
-
-    <script>
-        const indices = [0, 0, 0];
-
-        function mover(carrusel, direccion) {
-            const pista = document.querySelectorAll(".pista")[carrusel];
-            const total = pista.children.length;
-
-            indices[carrusel] =
-                (indices[carrusel] + direccion + total) % total;
-
-            pista.style.transform =
-                `translateX(-${indices[carrusel] * 100}%)`;
-        }
-    </script>
-    </main>
-    <br><br>
-    
-<!-- FOOTER -->
-<footer class="footer-hotel">
-
-    <div class="container">
-
-        <div class="row text-center">
-
-            <div class="col-md-4 mb-3">
-                <h5>Hotel Paraíso</h5>
-                <p>Tu lugar ideal para descansar y disfrutar.</p>
-            </div>
-
-            <div class="col-md-4 mb-3">
-                <h5>Contáctanos</h5>
-                <p><i class="bi bi-telephone-fill"></i> +506 8888-8888</p>
-                <p><i class="bi bi-envelope-fill"></i> contacto@hotelparaiso.com</p>
-            </div>
-
-            <div class="col-md-4 mb-3">
-                <h5>Síguenos</h5>
-
-                <div class="redes">
-                    <a href="https://www.facebook.com/" target="_blank">
-                        <i class="bi bi-facebook"></i>
-                    </a>
-
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <i class="bi bi-instagram"></i>
-                    </a>
-
-                    <a href="https://www.whatsapp.com/" target="_blank">
-                        <i class="bi bi-whatsapp"></i>
-                    </a>
+            <!-- Carrusel 1 -->
+            <div class="carrusel">
+                <h2>Habitacion Estandar</h2>
+                <div class="pista">
+                    <img src="../img/Habitacion/Estandar/Estandar_1.jpg" alt="estandar_1">
+                    <img src="../img/Habitacion/Estandar/Estandar_2.jpg" alt="estandar_2">
+                    <img src="../img/Habitacion/Estandar/Estandar_3.jpg" alt="estandar_3">
+                </div>
+                <div class="controles">
+                    <button onclick="mover(0, -1)">❮</button>
+                    <button onclick="mover(0, 1)">❯</button>
+                </div>
+                <br>
+                <h4>Caracteristicas</h4>
+                <li>2 adultos</li>
+                <li>1 cama matrimonial o 2 camas individuales</li>
+                <li>Wifi</li>
+                <li>Ducha</li>
+                <li>Secador de pelo</li>
+                <li>Articulos de aseo gratuito</li>
+                <li>Aire acondicionado</li>
+                <li>Televisor de pantalla plana</li>
+                <li>Minibar</li>
+                <li>Caja fuerte</li>
+                <br><br>
+                <div class="contenedor-boton">
+                    <a href="./form.html" class="boton-enlace">Reservar</a>
                 </div>
             </div>
 
+            <!-- Carrusel 2 -->
+            <div class="carrusel">
+                <h2>Suite</h2>
+                <div class="pista">
+                    <img src="../img/Habitacion/Suite/Suite_1.jpg" alt="suite_1">
+                    <img src="../img/Habitacion/Suite/Suite_2.jpg" alt="suite_2">
+                    <img src="../img/Habitacion/Suite/Suite_3.jpg" alt="suite_3">
+                    <img src="../img/Habitacion/Suite/Suite_4.jpg" alt="suite_4">
+                </div>
+                <div class="controles">
+                    <button onclick="mover(1, -1)">❮</button>
+                    <button onclick="mover(1, 1)">❯</button>
+                </div>
+                <br>
+                <h4>Caracteristicas</h4>
+                <li>2 adultos</li>
+                <li>cama King o Queen</li>
+                <li>Wifi</li>
+                <li>Ducha, bañera, toallas</li>
+                <li>Secador de pelo</li>
+                <li>Articulos de aseo gratuito</li>
+                <li>Aire acondicionado</li>
+                <li>Televisor de pantalla plana</li>
+                <li>Minibar</li>
+                <li>Caja fuerte</li>
+                <li> Ropa de cama de alta calidad</li>
+                <br><br>
+                <div class="contenedor-boton">
+                    <a href="./form.html" class="boton-enlace">Reservar</a>
+                </div>
+            </div>
+
+            <!-- Carrusel 3 -->
+            <div class="carrusel">
+                <h2>Habitacion Familiar</h2>
+                <div class="pista">
+                    <img src="../img/Habitacion/Familiar/Familiar_1.jpg" alt="familiar_1">
+                    <img src="../img/Habitacion/Familiar/Familiar_2.jpg" alt="familiar_2">
+                    <img src="../img/Habitacion/Familiar/Familiar_3.jpg" alt="familiar_3">
+                    <img src="../img/Habitacion/Familiar/Familiar_4.jpg" alt="familiar_4">
+                    <img src="../img/Habitacion/Familiar/Familiar_5.jpg" alt="familiar_5">
+                </div>
+                <div class="controles">
+                    <button onclick="mover(2, -1)">❮</button>
+                    <button onclick="mover(2, 1)">❯</button>
+                </div>
+                <br>
+                <h4>Caracteristicas</h4>
+                <li>4 adultos</li>
+                <li>1 cama matrimonial + 1 litera</li>
+                <li>Wifi</li>
+                <li>Ducha</li>
+                <li>Secador de pelo</li>
+                <li>Articulos de aseo gratuito</li>
+                <li>Aire acondicionado</li>
+                <li>Televisor de pantalla plana</li>
+                <li>Minibar</li>
+                <li>Caja fuerte</li>
+                <br><br>
+                <div class="contenedor-boton">
+                    <a href="./form.html" class="boton-enlace">Reservar</a>
+                </div>
+            </div>
         </div>
 
-        <hr>
+        <script>
+            const indices = [0, 0, 0];
 
-        <p class="text-center mb-0">
-            © 2026 Hotel Paraíso | Todos los derechos reservados.
-        </p>
+            function mover(carrusel, direccion) {
+                const pista = document.querySelectorAll(".pista")[carrusel];
+                const total = pista.children.length;
 
-    </div>
+                indices[carrusel] =
+                    (indices[carrusel] + direccion + total) % total;
 
-</footer>
+                pista.style.transform =
+                    `translateX(-${indices[carrusel] * 100}%)`;
+            }
+        </script>
+    </main>
+    <br><br>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FOOTER -->
+    <footer id="contacto" class="footer-hotel">
+
+        <div class="container">
+
+            <div class="row text-center">
+
+                <div class="col-md-4 mb-3">
+                    <h5>Hotel Paraíso</h5>
+                    <p>Tu lugar ideal para descansar y disfrutar.</p>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <h5>Contáctanos</h5>
+                    <p><i class="bi bi-telephone-fill"></i> +506 8888-8888</p>
+                    <p><i class="bi bi-envelope-fill"></i> contacto@hotelparaiso.com</p>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <h5>Síguenos</h5>
+
+                    <div class="redes">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="https://www.whatsapp.com/" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="text-center mb-0">
+                © 2026 Hotel Paraíso | Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
