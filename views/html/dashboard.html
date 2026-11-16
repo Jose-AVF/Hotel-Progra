@@ -6,8 +6,12 @@
         <meta charset="UTF-8">
         <!-- Esto hace que la página se adapte al tamaño de la pantalla -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap va de primero para que nuestros CSS le puedan ganar si hace falta -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <!-- CSS del equipo para el menú de arriba (../ para salir de la carpeta html) -->
         <link rel="stylesheet" href="../css/global.css">
+        <!-- Los iconitos del pie de página (teléfono, correo y redes), los mismos de habitaciones -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
         <!-- Mi CSS del dashboard -->
         <link rel="stylesheet" href="../css/dashboard.css">
         <!-- Lo que sale en la pestaña del navegador -->
@@ -19,7 +23,8 @@
         <!-- ===== MENÚ DE ARRIBA ===== -->
         <!-- Es el mismo menú del index para que todas las páginas se vean iguales -->
         <header>
-            <nav class="navbar">
+            <!-- Sin class="navbar" porque Bootstrap tiene una clase igual y me quitaba el espacio de los lados -->
+            <nav>
                 <img src="../img/Logo_Hotel.png" alt="Logo Hotel Playa Blanca" width="300">
                 <div class="links">
                     <!-- ../../ porque el index está dos carpetas más arriba -->
@@ -210,5 +215,51 @@
                 </table>
             </section>
         </main>
+
+        <!-- ===== PIE DE PÁGINA ===== -->
+        <!-- Mismo diseño del footer de habitaciones, hecho con las clases de Bootstrap -->
+        <footer class="footer-hotel">
+            <!-- container centra el contenido y le pone un ancho máximo -->
+            <div class="container">
+                <!-- row es la fila, text-center centra el texto -->
+                <div class="row text-center">
+                    <!-- col-md-4 = 4 de 12 espacios, o sea 3 columnas; en celular van una debajo de la otra -->
+                    <div class="col-md-4 mb-3">
+                        <h5>Hotel Playa Blanca</h5>
+                        <p>Tu lugar ideal para descansar y disfrutar.</p>
+                    </div>
+
+                    <!-- El teléfono y el correo son los mismos que salen en el index -->
+                    <div class="col-md-4 mb-3">
+                        <h5>Contáctanos</h5>
+                        <p><i class="bi bi-telephone-fill"></i> +506 1234 5678</p>
+                        <p><i class="bi bi-envelope-fill"></i> info@hotelplayablanca.com</p>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <h5>Síguenos</h5>
+                        <div class="redes">
+                            <!-- target="_blank" abre en otra pestaña, rel="noopener" es por seguridad -->
+                            <!-- aria-label le dice el nombre de la red a los lectores de pantalla -->
+                            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://www.whatsapp.com/" target="_blank" rel="noopener" aria-label="WhatsApp">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- La rayita dorada que separa las columnas del copyright -->
+                <hr>
+
+                <!-- mb-0 le quita el espacio de abajo -->
+                <p class="text-center mb-0">© 2026 Hotel Playa Blanca | Todos los derechos reservados.</p>
+            </div>
+        </footer>
     </body>
 </html>

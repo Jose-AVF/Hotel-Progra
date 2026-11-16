@@ -16,6 +16,12 @@ body {
   margin-bottom: 0;  /* pego el título a la fecha */
 }
 
+/* Bootstrap cambia el tamaño de los títulos, aquí los dejo como estaban */
+.dashboard h1 { font-size: 32px; font-weight: bold; }
+.dashboard h2 { font-size: 24px; font-weight: bold; }
+.dashboard h3 { font-size: 18px; font-weight: bold; }
+.dashboard h4 { font-size: 16px; font-weight: bold; }
+
 /* La fecha debajo del título */
 .fecha {
   margin-top: 5px;
@@ -175,6 +181,64 @@ th {
 .lleno {
   color: red;
   font-weight: bold;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+/* Los colores y tamaños son los mismos del footer de habitaciones */
+.footer-hotel {
+  background-color: #143e68;     /* azul oscuro */
+  color: white;
+  padding: 30px 0 20px;
+  border-top: 3px solid #d4a017; /* rayita dorada arriba */
+  border-radius: 20px;           /* esquinas redondeadas */
+  margin: 0 5cm 30px;            /* 5 cm a cada lado y un espacio abajo para que se vea el fondo */
+}
+
+/* Las columnas, el centrado y los espacios ya los hace Bootstrap en el HTML */
+
+/* Los títulos dorados */
+.footer-hotel h5 {
+  margin-bottom: 15px;
+  color: #d4a017;
+}
+
+.footer-hotel p {
+  font-size: 13px;
+  color: #ddd;
+}
+
+/* La rayita que separa el copyright */
+.footer-hotel hr {
+  border-color: #d4a017;
+}
+
+/* Las bolitas doradas de las redes */
+.redes a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  background-color: #d4a017;
+  color: white;
+  border-radius: 50%;       /* 50% = círculo */
+  text-decoration: none;    /* le quito la rayita de link */
+  transition: 0.3s;         /* para que el cambio sea suave */
+}
+
+/* Cuando paso el mouse se pone blanca y sube un poquito */
+.redes a:hover {
+  background-color: white;
+  color: #212529;
+  transform: translateY(-3px);
+}
+
+/* En pantallas más pequeñas 5 cm es demasiado, así que dejo un margen chiquito */
+@media (max-width: 991px) {
+  .footer-hotel {
+    margin: 0 15px 15px;
+  }
 }
 
 /* ===== CELULAR ===== */
