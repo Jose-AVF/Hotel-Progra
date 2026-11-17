@@ -90,7 +90,13 @@ ul.lista-derecha li::after {
   padding: 10px 2px 5px 10px;
 }
 
-#lugares_hotel img{
-  max-width: 100%;
-  height: auto;
+#carruselHotel .carousel-item{
+  height: 350px;
+}
+
+#carruselHotel .carousel-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
 }
