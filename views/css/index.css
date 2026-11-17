@@ -90,11 +90,11 @@ ul.lista-derecha li::after {
   padding: 10px 2px 5px 10px;
 }
 
-#carruselHotel .carousel-item{
+#carruselRecreacion .carousel-item{
   height: 350px;
 }
 
-#carruselHotel .carousel-item img{
+#carruselRecreacion .carousel-item img{
   height: 100%;
   width: 100%;
   object-fit: cover;
