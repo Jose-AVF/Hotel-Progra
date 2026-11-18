@@ -90,11 +90,37 @@ ul.lista-derecha li::after {
   padding: 10px 2px 5px 10px;
 }
 
+#carruselRecreacion{
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 #carruselRecreacion .carousel-item{
   height: 350px;
 }
 
 #carruselRecreacion .carousel-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#carruselComidas{
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#carruselComidas .carousel-inner{
+  height: 100%;
+}
+
+#carruselComidas .carousel-item{
+  height: 350px;
+}
+
+#carruselComidas .carousel-item img{
   height: 100%;
   width: 100%;
   object-fit: cover;
