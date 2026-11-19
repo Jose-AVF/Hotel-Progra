@@ -147,3 +147,25 @@ ul.lista-derecha li::after {
   object-fit: cover;
   display: block;
 }
+
+/* ---*/
+#carruselSpa{
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#carruselSpa .carousel-inner{
+  height: 100%;
+}
+
+#carruselSpa .carousel-item{
+  height: 350px;
+}
+
+#carruselSpa .carousel-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
