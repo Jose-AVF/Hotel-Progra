@@ -126,3 +126,24 @@ ul.lista-derecha li::after {
   object-fit: cover;
   display: block;
 }
+
+#carruselPiscina{
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#carruselPiscina .carousel-inner{
+  height: 100%;
+}
+
+#carruselPiscina .carousel-item{
+  height: 350px;
+}
+
+#carruselPiscina .carousel-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
