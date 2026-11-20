@@ -107,6 +107,7 @@ body {
         padding: 9px 8px;
     }
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -194,29 +195,34 @@ h1 {
         width: 100%;
     }
 }
+
 .contenedor-boton {
-  display: flex;
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
+    align-items: center;
+    width: 100%;
 }
 
 /* Estilo para que el enlace parezca un botón interactivo */
 .boton-enlace {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #007bff; /* Color azul */
-  color: white;
-  text-decoration: none; /* Quita el subrayado del enlace */
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
+    /* Color azul */
+    color: white;
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 /* Efecto visual al pasar el cursor */
 .boton-enlace:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
+
 /* FOOTER */
 .footer-hotel {
     background-color: #143e68;
