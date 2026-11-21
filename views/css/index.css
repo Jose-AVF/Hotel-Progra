@@ -3,6 +3,7 @@
 body{
   margin: 0px;
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .alinearDerecha{
@@ -168,4 +169,45 @@ ul.lista-derecha li::after {
   width: 100%;
   object-fit: cover;
   display: block;
+}
+
+footer{
+    background-color: #143e68;
+    color: white;
+    padding: 30px 0 20px;
+    border-top: 3px solid #d4a017;
+}
+
+footer h5 {
+    color: #d4a017;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #ddd;
+}
+
+footer hr {
+    border-color: #d4a017;
+}
+
+.redes a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    background: #d4a017;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    background: white;
+    color: #212529;
+    transform: translateY(-3px);
 }
