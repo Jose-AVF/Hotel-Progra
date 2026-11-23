@@ -1,0 +1,84 @@
+
+header{
+    background-color: #73c7c0;
+    display: flex;
+    justify-content: end;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header nav img{
+    max-height: 150px;
+    width: auto;
+}
+
+.links {
+    display: flex;
+    gap: 30px;
+    align-items: end;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    justify-content: flex-end;
+}
+
+.links a {
+    text-decoration: none;
+    color: #222020;
+}
+
+
+.links a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+
+.alturaBarra{
+    display: flex;
+    min-height: 25px;
+}
+
+.volumenIcono{
+    width: 200px;
+    height: 300px;
+    margin: 0%;
+}
+
+.volumenIcono img{
+    width: 75px;
+    height: 75px; 
+}
+
+.encabezado {
+    width: 100%;
+    background-color: #73c7c0;
+    box-shadow: 0 3px 12px rgba(0, 60, 80, 0.10);
+    position: relative;
+    z-index: 100;
+}
+
+/* Contenedor del menú */
+.navbar {
+    max-width: 1200px;
+    min-height: 110px;
+    margin: 0 auto;
+    padding: 10px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
