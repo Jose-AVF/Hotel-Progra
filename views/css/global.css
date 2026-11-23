@@ -1,3 +1,4 @@
+
 header{
     background-color: #73c7c0;
     display: flex;
@@ -30,12 +31,14 @@ header nav img{
     align-items: end;
     flex-wrap: wrap;
     white-space: nowrap;
+    justify-content: flex-end;
 }
 
 .links a {
     text-decoration: none;
     color: #222020;
 }
+
 
 .links a:hover {
     text-decoration: underline;
@@ -58,4 +61,24 @@ header nav img{
     width: 75px;
     height: 75px; 
 }
-/*#73c7c0*/
+
+.encabezado {
+    width: 100%;
+    background-color: #73c7c0;
+    box-shadow: 0 3px 12px rgba(0, 60, 80, 0.10);
+    position: relative;
+    z-index: 100;
+}
+
+/* Contenedor del menú */
+.navbar {
+    max-width: 1200px;
+    min-height: 110px;
+    margin: 0 auto;
+    padding: 10px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
