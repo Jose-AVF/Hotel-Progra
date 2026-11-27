@@ -8,7 +8,7 @@ body {
 /* Caja que tiene todo el contenido */
 .dashboard {
   max-width: 1000px;  /* que no se estire mucho en pantallas grandes */
-  margin: 0 auto;     /* auto a los lados = lo centra */
+  margin: 0 auto;     /* auto a los lados para q quede parejo  */
   padding: 30px;      /* espacio por dentro */
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 /* ===== TARJETAS ===== */
-/* flex pone las tarjetas una al lado de la otra */
+/* Uso flex para poner las cahitas uno al lado del otro */
 .tarjetas {
   display: flex;
   gap: 20px;          /* espacio entre tarjetas */
@@ -59,7 +59,7 @@ body {
   color: #3a9b93;  /* turquesa más oscuro para que se lea bien */
 }
 
-/* ===== CAJA BLANCA DE LA TABLA ===== */
+/*  CAJA BLANCA DE LA TABLA  */
 .caja {
   background-color: white;
   border-radius: 10px;
@@ -98,20 +98,25 @@ body {
   justify-content: center;
 }
 
-/* Colores de cada estado (los uso en los cuadritos y en la leyenda) */
+/* Colores de cada estado  */
 .libre {
-  background-color: #4caf50;  /* verde */
+  background-color: #4caf50;  
 }
 
 .ocupada {
-  background-color: #e57373;  /* rojo suave */
+  background-color: #e57373;  
 }
 
 .limpieza {
-  background-color: #f4b942;  /* amarillo */
+  background-color: #f4b942;  
 }
 
-/* ===== LEYENDA ===== */
+/* Habitación reservada de alguien que llega hoy (todavía no ha entrado) */
+.reservada {
+  background-color: #5b9bd5;  
+}
+
+/*  LEYENDA  */
 .leyenda {
   color: gray;
 }
@@ -146,8 +151,7 @@ body {
 
 /* ===== TABLA ===== */
 table {
-  width: 100%;                /* ocupa todo el ancho de la caja */
-  border-collapse: collapse;  /* para que las líneas no salgan dobles */
+  width: 100%;  /* ocupa todo el ancho de la caja */
 }
 
 /* th = títulos, td = datos */
@@ -224,14 +228,12 @@ th {
   color: white;
   border-radius: 50%;       /* 50% = círculo */
   text-decoration: none;    /* le quito la rayita de link */
-  transition: 0.3s;         /* para que el cambio sea suave */
 }
 
-/* Cuando paso el mouse se pone blanca y sube un poquito */
+/* Cuando paso el mouse se pone blanca (:hover es una pseudo-clase) */
 .redes a:hover {
   background-color: white;
   color: #212529;
-  transform: translateY(-3px);
 }
 
 /* En pantallas más pequeñas 5 cm es demasiado, así que dejo un margen chiquito */
@@ -256,9 +258,10 @@ th {
     gap: 10px;
   }
 
-  /* 2 tarjetas por fila: la mitad menos un poquito por el gap */
+  /* 2 tarjetas por fila: cada una pide 40% y el flex las estira hasta llenar la fila */
+  /* (con 40% solo caben 2 por fila, la tercera ya no cabe y se baja) */
   .tarjeta {
-    flex: 1 1 calc(50% - 10px);
+    flex: 1 1 40%;
   }
 
   /* Número un poco más pequeño para que no se vea gigante */
