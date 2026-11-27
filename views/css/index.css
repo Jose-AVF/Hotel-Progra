@@ -3,12 +3,19 @@
 body{
   margin: 0px;
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .alinearDerecha{
   display: flex;
   justify-content: right;
   align-content: end;
+}
+
+.alinearCentro{
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .aparte{
@@ -29,8 +36,12 @@ body{
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
-.degradadoColorCentroArriba{
-  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(138, 184, 184) 100%); 
+.degradadoCentral{
+  background-image: linear-gradient(rgba(255,0,0,0), rgb(138, 184, 184)50%,rgb(138, 184, 184), rgba(255,0,0,0)25%); 
+}
+
+.degradadoColor{
+  background-image: repeating-linear-gradient( rgba(138, 184, 184,0),rgb(138, 184, 184,1), rgb(138, 184, 184,1),rgb(138, 184, 184,1),rgba(138, 184, 184,0)); 
 }
 
 .contenedor-principal {
@@ -49,4 +60,155 @@ body{
 .margenIzquierda{
   display: flex;
   margin-left: 10px;
+}
+
+.margenItems{
+  display: flex;
+  margin: 2px 10px 10px 10px;
+}
+
+ul.lista-derecha li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+ul.lista-derecha li::after {
+  content: "•";
+  font-size: 25px;
+}
+
+.tituloCentrado{
+  width: 100%;
+  text-align: center;
+}
+
+.margenImagenIzquierda{
+  padding: 2px 10px 10px 10px;
+}
+
+.margenImagenDerecha{
+  padding: 10px 2px 5px 10px;
+}
+
+#carruselRecreacion{
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#carruselRecreacion .carousel-item{
+  height: 350px;
+}
+
+#carruselRecreacion .carousel-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#carruselComidas{
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#carruselComidas .carousel-inner{
+  height: 100%;
+}
+
+#carruselComidas .carousel-item{
+  height: 350px;
+}
+
+#carruselComidas .carousel-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#carruselPiscina{
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#carruselPiscina .carousel-inner{
+  height: 100%;
+}
+
+#carruselPiscina .carousel-item{
+  height: 350px;
+}
+
+#carruselPiscina .carousel-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---*/
+#carruselSpa{
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#carruselSpa .carousel-inner{
+  height: 100%;
+}
+
+#carruselSpa .carousel-item{
+  height: 350px;
+}
+
+#carruselSpa .carousel-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+footer{
+    background-color: #143e68;
+    color: white;
+    padding: 30px 0 20px;
+    border-top: 3px solid #d4a017;
+    margin-top: 20px;
+}
+
+footer h5 {
+    color: #d4a017;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #ddd;
+}
+
+footer hr {
+    border-color: #d4a017;
+}
+
+.redes a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    background: #d4a017;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    background: white;
+    color: #212529;
+    transform: translateY(-3px);
 }
