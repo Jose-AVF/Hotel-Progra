@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body{
   margin: 0px;
   max-width: 100%;
@@ -211,4 +215,25 @@ footer hr {
     background: white;
     color: #212529;
     transform: translateY(-3px);
+}
+
+#btn-subir {
+  position: fixed;   /* Se queda fijo en la pantalla */
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: #e6a939;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;     /* Por encima del resto del contenido */
+  display: none;     /* Oculto al inicio; jQuery lo muestra */
+}
+
+#btn-subir:hover {
+  background: #9e7935;
 }

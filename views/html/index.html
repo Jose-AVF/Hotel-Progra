@@ -44,6 +44,10 @@
                             Algunas de las actividades incluyen senderismo, kayak, y snorkel, por lo que vas a poder disfrutar
                             de la fauna y flora local. Vas a poder deleitarte también de nuestra área de piscina, masajes, entre otros.
                         </p>
+                        <!--col-12 para asegurarse que incluso en dispositivos pequeños se muestren las 12 columnas
+                            col-md-7 para número de columnas en pantallas medianas y grandes
+                            offset-md-1 para empujar las columnas hacía la derecha dejando espacio vacio a la izquierda
+                        -->
                         <div class="col-12 col-md-7 offset-md-1">
                             <style>
                                 .underline{
@@ -60,6 +64,10 @@
                                 <h3>65 metros sur de restaurante Baldi´s Plus Restaurant</h3>
                         </div>
                     </div>
+                    <!--col-12 para asegurarse que incluso en dispositivos pequeños se muestren las 12 columnas
+                            col-md-7 para número de columnas en pantallas medianas y grandes
+                            offset-md-1 para empujar las columnas hacía la derecha dejando espacio vacio a la izquierda
+                        -->
                     <div class="col-12 col-md-4 offset-md-1">
                         <h2 class="h4 mb-4 fw-bold text-center">Nuestras comodidades</h2>
                         <div class="row row-cols-2 g-4 align-items-center justify-content-center">
@@ -88,8 +96,9 @@
 
             <section id="Zonas-Recreativas">
                 <div class="degradadoColor">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
+                <div class="row align-items-center"> <!--Centramos verticalmente las columnas dentro de las filas-->
+                    <div class="col-md-6"> <!--Hacemos una división de 2 columas de igual tamaño de anchura-->
+                        <!--Clases de bootstrap necesarios para la creación de craouseles, tomando en cuenta tiempo de desplasamiento y tamaño de las imagenes-->
                         <div id="carruselRecreacion" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
@@ -107,7 +116,7 @@
                             </div>
                         </div>
                     </div>
-                <div class="col-md-5 offset-md-1">
+                <div class="col-md-5 offset-md-1"><!-- offset-md-1 para que deje una columna vacía a la izquierda-->
                     <h2>Disfrute de zonas de recreación</h2>
                     <p>Contamos con espacios recreativos ideales para compartir, entre ellos:</p>
                     <ul>
@@ -123,7 +132,7 @@
 
             <section id="comidas">
                 <div class="degradadoColor">
-                    <div class="row align-items-center">
+                    <div class="row align-items-center"> <!--Centramos verticalmente las columnas dentro de las filas-->
                     <div class="col-md-5 offset-md-1" style="padding-right: 100px;">
                         <h2>Comidas deliciosas</h2>
                         <p>
@@ -177,7 +186,7 @@
             <section id="spa">
                 <div class="degradadoColor"> 
                     <div class="row align-items-center">
-                        <div class="col-md-5 offset-md-1">
+                        <div class="col-md-5 offset-md-1" style="padding-right: 100px;">
                             <h2>Zona de spa y masajes</h2>
                             <p> 
                                 Incluimos servicios de spa y masajes con personal altamente calificado para brindarle una experiencia de relajación
@@ -235,6 +244,9 @@
             </p>
         </div>
         </footer>
+        <button id="btn-subir" type="button" aria-label="Volver al inicio" title="Volver al inicio">&uarr;</button>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-4.1.0.min.js"></script>
+    <script src="../js/index.js"></script>
 </html>
