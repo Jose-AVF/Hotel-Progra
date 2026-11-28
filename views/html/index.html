@@ -211,20 +211,20 @@
         </main>
         <footer>
             <section id="contact">
-            <div class="container">
+            <div class="container"> <!--Define responsivamente una anchura máxima-->
             <div class="row text-center">
                 <div class="col-md-4 mb-3">
                     <h5>Hotel Paraíso</h5>
                     <p>Tu lugar ideal para descansar y disfrutar.</p>
                 </div>
                 <div class="col-md-4 mb-3">
+                    <!--Iconos traidos de bootstrap-->
                     <h5>Contáctanos</h5>
                     <p><i class="bi bi-telephone-fill"></i> +506 8888-8888</p>
                     <p><i class="bi bi-envelope-fill"></i> contacto@hotelparaiso.com</p>
                 </div>
                 <div class="col-md-4 mb-3">
                     <h5>Síguenos</h5>
-                    <!--Iconos traidos de bootstrap-->
                     <div class="redes">
                         <a href="https://www.facebook.com/" target="_blank">
                             <i class="bi bi-facebook"></i>
@@ -244,8 +244,11 @@
             </p>
         </div>
         </footer>
+        <!--Código necesario para crear el bóton para hacer el scroll automatico. Hecho con jquery, documento en la carpeta js, que esta dentro de la carpeta views-->
+        <!-- &uarr; se necesita para el tipo/apariencia que tenga su botón-->
         <button id="btn-subir" type="button" aria-label="Volver al inicio" title="Volver al inicio">&uarr;</button>
     </body>
+    <!--Todos los scripts de bootstrap, jquery y javascript necesarios para el funcionamiento correcto de la página-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-4.1.0.min.js"></script>
     <script src="../js/index.js"></script>

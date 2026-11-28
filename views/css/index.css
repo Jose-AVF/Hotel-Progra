@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
 
+/* Todo lo que no comente en este documento lo dejo por si lo vaya a necesitar luego y para no arriesgar problemas en el código */
+
+/* Aplica a todo el documento de html */
 * {
   box-sizing: border-box;
 }
@@ -7,7 +10,7 @@
 body{
   margin: 0px;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Esconde todo lo que salga del eje x */
 }
 
 .alinearDerecha{

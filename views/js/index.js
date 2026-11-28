@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // Mostrar u ocultar el botón según el scroll
+  // Mostrar y ocultar el botón dependiendo el scroll
     $(window).on('scroll', function () {
     if ($(this).scrollTop() > 200) {
         $('#btn-subir').fadeIn();
@@ -8,7 +8,7 @@ $(document).ready(function () {
     }
     });
 
-  // Al hacer clic, subir suavemente hasta el header
+  // Al hacer clic, sube suavemente hasta el header
     $('#btn-subir').on('click', function () {
     $('html, body').animate({
         scrollTop: $('header').offset().top
