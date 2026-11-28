@@ -16,14 +16,14 @@
         <link rel="stylesheet" href="../css/dashboard.css">
         <!-- Lo que sale en la pestaña del navegador -->
         <title>Dashboard - Hotel Playa Blanca</title>
-        <!-- El iconito de la pestaña, es el círculo del logo recortado -->
+        <!-- El iconito de la pestaña, -->
         <link rel="icon" type="image/png" href="../img/icono.png">
     </head>
     <body>
         <!-- ===== MENÚ DE ARRIBA ===== -->
         <!-- Es el mismo menú del index para que todas las páginas se vean iguales -->
         <header>
-            <!-- Sin class="navbar" porque Bootstrap tiene una clase igual y me quitaba el espacio de los lados -->
+            <!-- Sin class="navbar" porque Bootstrap tiene una clase igual y se chocaban -->
             <nav>
                 <img src="../img/Logo_Hotel.png" alt="Logo Hotel Playa Blanca" width="300">
                 <div class="links">
@@ -37,24 +37,25 @@
             </nav>
         </header>
 
-        <!-- ===== CONTENIDO ===== -->
+        <!-- CONTENIDO -->
         <main class="dashboard">
             <h1>Panel de administración</h1>
             <!-- La fecha de hoy, todos los datos de abajo son de este día -->
-            <p class="fecha">Jueves 29 de octubre, 2026</p>
+            <p class="fecha">Viernes 4 de diciembre, 2026</p>
 
             <!-- ===== TARJETAS ===== -->
             <!-- Los números salen del mapa de habitaciones de abajo -->
             <section class="tarjetas">
                 <div class="tarjeta">
                     <h3>Ocupación</h3>
-                    <!-- 7 ocupadas de 12 habitaciones = 58% -->
+                    <!-- Esta noche: 4 ocupadas + 3 que llegan hoy = 7 de 12 habitaciones = 58% -->
                     <p class="numero">58%</p>
                 </div>
                 <div class="tarjeta">
                     <h3>Huéspedes</h3>
-                    <!-- 6 estándar/deluxe ocupadas x 2 personas + 1 familiar x 4 = 16 -->
-                    <p class="numero">16</p>
+                    <!-- Solo los que ya están en el hotel: 4 habitaciones ocupadas x 2 personas = 8 -->
+                    
+                    <p class="numero">8</p>
                 </div>
                 <div class="tarjeta">
                     <h3>Libres</h3>
@@ -76,6 +77,7 @@
                 <p class="leyenda">
                     <span class="punto libre"></span> Libre
                     <span class="punto ocupada"></span> Ocupada
+                    <span class="punto reservada"></span> Llega hoy
                     <span class="punto limpieza"></span> En limpieza
                 </p>
 
@@ -85,7 +87,8 @@
                     <div class="hab ocupada">101</div>
                     <div class="hab libre">102</div>
                     <div class="hab ocupada">103</div>
-                    <div class="hab ocupada">104</div>
+                    <!-- 104, 201 y 301 son de los que llegan hoy (ver "Llegadas de hoy") -->
+                    <div class="hab reservada">104</div>
                     <div class="hab limpieza">105</div>
                     <div class="hab libre">106</div>
                 </div>
@@ -93,7 +96,7 @@
                 <!-- Piso 2: Deluxe, para 2 adultos con cama doble -->
                 <h4>Deluxe · 2 adultos</h4>
                 <div class="habitaciones">
-                    <div class="hab ocupada">201</div>
+                    <div class="hab reservada">201</div>
                     <div class="hab ocupada">202</div>
                     <div class="hab limpieza">203</div>
                     <div class="hab ocupada">204</div>
@@ -102,7 +105,7 @@
                 <!-- Piso 3: Familiar, para 4 adultos -->
                 <h4>Familiar · 4 adultos</h4>
                 <div class="habitaciones">
-                    <div class="hab ocupada">301</div>
+                    <div class="hab reservada">301</div>
                     <div class="hab libre">302</div>
                 </div>
             </section>
@@ -186,30 +189,30 @@
                     <tr>
                         <td>María Rodríguez</td>
                         <td>Deluxe 201</td>
-                        <td>29/10/2026</td>
-                        <td>02/11/2026</td>
+                        <td>04/12/2026</td>
+                        <td>08/12/2026</td>
                         <!-- La clase le pone el color al estado (verde, naranja o rojo) -->
                         <td class="confirmada">Confirmada</td>
                     </tr>
                     <tr>
                         <td>Carlos Jiménez</td>
                         <td>Familiar 302</td>
-                        <td>30/10/2026</td>
-                        <td>03/11/2026</td>
+                        <td>05/12/2026</td>
+                        <td>09/12/2026</td>
                         <td class="pendiente">Pendiente</td>
                     </tr>
                     <tr>
                         <td>Ana Vargas</td>
                         <td>Estándar 102</td>
-                        <td>31/10/2026</td>
-                        <td>01/11/2026</td>
+                        <td>06/12/2026</td>
+                        <td>07/12/2026</td>
                         <td class="confirmada">Confirmada</td>
                     </tr>
                     <tr>
                         <td>Luis Mora</td>
                         <td>Estándar 106</td>
-                        <td>01/11/2026</td>
-                        <td>04/11/2026</td>
+                        <td>07/12/2026</td>
+                        <td>10/12/2026</td>
                         <td class="cancelada">Cancelada</td>
                     </tr>
                 </table>
@@ -239,15 +242,15 @@
                     <div class="col-md-4 mb-3">
                         <h5>Síguenos</h5>
                         <div class="redes">
-                            <!-- target="_blank" abre en otra pestaña, rel="noopener" es por seguridad -->
-                            <!-- aria-label le dice el nombre de la red a los lectores de pantalla -->
-                            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+                            <!-- target="_blank" abre el link en otra pestaña -->
+                            <!-- title es el textito que sale al dejar el mouse encima -->
+                            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
                                 <i class="bi bi-facebook"></i>
                             </a>
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <a href="https://www.instagram.com/" target="_blank" title="Instagram">
                                 <i class="bi bi-instagram"></i>
                             </a>
-                            <a href="https://www.whatsapp.com/" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <a href="https://www.whatsapp.com/" target="_blank" title="WhatsApp">
                                 <i class="bi bi-whatsapp"></i>
                             </a>
                         </div>
@@ -261,5 +264,10 @@
                 <p class="text-center mb-0">© 2026 Hotel Playa Blanca | Todos los derechos reservados.</p>
             </div>
         </footer>
+
+        <!-- El JS de Bootstrap va al final del body  -->
+        <!-- Sin esta línea no funcionan cosas como el carrusel o el menú hamburguesa -->
+        <!-- Es la misma línea que usa el index -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
     </body>
 </html>

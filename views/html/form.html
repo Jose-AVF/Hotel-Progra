@@ -4,9 +4,369 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../img/icono.png">
-    <title>Document</title>
+    <title> Formulario para temas de reserva </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/formulario.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
+    <!-- Barra nav -->
+    <header>
+        <nav class="barraNavegacion">
+            <img src="../img/Logo_Hotel.png" alt="Logo Hotel Playa Blanca">
+        </nav>
+    </header>
+
+    <!-- Cuerpo -->
+    <main class="contenedorFormulario">
     
+        <!-- Titulo y desc -->
+        <section class="encabezadoForm">
+            <h1 class="fw-bold" >
+                Comienza Tu Estadía Aqui
+            </h1>
+
+            <p class="text-secondary fw-bold">
+                Complete sus datos para poder avanzar con su reservacion.
+            </p>
+        </section>
+
+        <div class="contenidoPrincipal row"> <!-- row: organiza columnas horizontalmente -->
+            <!-- seccion del formulario-->
+            <section class="seccionFormulario col-7">
+                <div class="contenidoFormulario">
+                
+                    <!-- Formulario -->
+                    <form id="reservaFormulario">
+
+                        <!-- PARTE 1 -->
+                        <section class="paso" id="paso1">
+
+                            <h2 class="fw-bold">
+                                Informacion del usuario
+                            </h2>
+
+                            <p class="indicadorPaso"> Paso 1/3 </p>
+
+                            <div class="campo">
+                                <label for="nombre">
+                                    Nombre Completo:
+                                </label>
+                        
+                                <input 
+                                    type="text"
+                                    id="nombre"
+                                    class="form-control"
+                                    name="nombre"
+                                    placeholder="Digite su nombre completo"
+                                    required
+                                >
+                                <!-- class="form-control": da estilos a los campos -->
+                            </div>
+
+                            <div class="campo">
+                                <label for="correo">
+                                    Correo Electronico
+                                </label>
+
+                                <input 
+                                    type="email"
+                                    id="correo"
+                                    name="correo"
+                                    class="form-control"
+                                    placeholder="usuario@correo.com"
+                                    required
+                                >
+                            </div>
+
+                            <div class="campo">
+                                <label for="numero">
+                                    Número de teléfono:
+                                </label>
+                        
+                                <input 
+                                    type="tel"
+                                    id="numero"
+                                    name="numero"
+                                    class="form-control"
+                                    placeholder="Escriba su número telefonico"
+                                    required
+                                >
+                            </div>
+                        </section>
+
+                        <!-- PARTE 2 -->
+                        <section class="paso" id="paso2" hidden>
+                            <h2>
+                                Detalles de la reservacion
+                            </h2>
+
+                            <p class="indicadorPaso">
+                                Paso 2/3
+                            </p>
+
+                            <div class="campo">
+                                <label for="fechaEntrada">
+                                    Fecha de Entrada:
+                                </label>
+
+                                <input 
+                                    type="date"
+                                    id="fechaEntrada"
+                                    name="fechaEntrada"
+                                    required
+                                >
+                            </div>
+
+                            <div class="campo">
+                                <label for="fechaSalida">
+                                    Fecha de Salida:
+                                </label>
+
+                                <input 
+                                    type="date"
+                                    id="fechaSalida"
+                                    name="fechaSalida"
+                                    required
+                                >
+                            </div>
+
+                            <!-- Cantidad de Huepedes-->
+                            <div class="campo">
+                                <label for="cantidadHuespedes">
+                                    Cantidad de Huespedes:
+                                </label>
+
+                                <select 
+                                    name="cantidadHuespedes" 
+                                    id="cantidadHuespedes"
+                                    required
+                                >
+                                    <option value="">
+                                        Seleccione la cantidad de huespedes
+                                    </option>
+
+                                    <option value="1">
+                                        1 Huesped
+                                    </option>
+
+                                    <option value="2">
+                                        2 Huespedes
+                                    </option>
+
+                                    <option value="3">
+                                        3 Huespedes
+                                    </option>
+
+                                    <option value="4">
+                                        4 Huespedes
+                                    </option>
+
+                                    <option value="5">
+                                        5 Huespedes
+                                    </option>
+                                </select>
+                                
+                            </div>
+
+                            <!-- Tipo habitacion -->
+                            <div class="campo">
+                                <label for="tipoHabitacion">
+                                    Tipo de habitacion:
+                                </label>
+
+                                <select 
+                                    name="tipoHabitacion" 
+                                    id="tipoHabitacion"
+                                    required
+                                >
+                                    <option value="">
+                                        Seleccione el tipo de habitacion
+                                    </option>
+
+                                    <option value="Habitacion Estandar">
+                                        Habitacion Estandar
+                                    </option>
+
+                                    <option value="Habitacion Deluxe">
+                                        Habitacion Deluxe
+                                    </option>
+
+                                    <option value="Habitacion Familiar">
+                                        Habitacion Familiar
+                                    </option>
+
+                                </select>
+                            </div>
+                        </section>
+
+                        <!-- PARTE 3 -->
+                        <section class="paso" id="paso3" hidden>
+                            <h2>
+                                Confirme Su Reserva
+                            </h2>
+
+                            <p class="indicadorPaso">
+                            Paso 3/3
+                            </p>
+                            <p>
+                                Confirme Sus Datos Antes de Continuar...
+                            </p>
+
+                            <div class="datosFormulario">
+                                <h3>
+                                    Datos del Huesped
+                                </h3>
+
+                                <p>
+                                    <strong>
+                                        Nombre completo
+                                    </strong>
+
+                                    <span id="datosNombre"></span>
+                                </p>
+
+                                <p>
+                                    <strong>Correo Electronico</strong>
+                                    <span id="datosCorreo"></span>
+                                </p>
+
+                                <p>
+                                    <strong>Telefono</strong>
+                                <span id="datosTelefono"></span>
+                                </p>
+
+                                <h3>
+                                    Detalles de Reserva
+                                </h3>
+
+                                <p>
+                                    <strong>Fecha de entrada:</strong>
+                                    <span id="datosEntrada"></span>
+                                </p>
+
+                                <p>
+                                    <strong>Fecha de salida:</strong>
+                                    <span id="datosSalida"></span>
+                                </p>
+
+                                <p>
+                                    <strong>Cantidad de Huespedes:</strong>
+                                    <span id="datosHuespedes"></span>
+                                </p>
+
+                                <p>
+                                    <strong>Tipo de Habitacion</strong>
+                                    <span id="datosHabitacion"></span>
+                                </p>
+                            </div>
+                        </section>
+
+                        <!-- Botones -->
+                        <div>
+                            <button type="button" id="botonCancelar" onclick="cancelacion()">
+                                Cancelar
+                            </button>
+                        
+                            <button type="button" id="botonSiguiente" onclick="siguienteP()">
+                                Siguiente
+                            </button>
+
+                            <button type="submit" id="botonConfirmar" hidden>
+                                Confirmar Reserva
+                            </button>
+                        </div>
+
+                        <!-- Advertencia para confirmar la cancelacion -->
+                        <div id="confirmarCancelacion" hidden>
+                            
+                            <div class="capaConfirmacion">
+
+                                <div class="container">
+                                    
+                                    <div class="row">
+
+                                        <div class="col-1 col-md-2"></div> <!-- Agrega espacio de 1 y 2 a la izquierda(posicionado por row) -->
+                                        
+                                        <div class="col-10 col-md-8">
+                                            <div class="ventanaConfirmacion text-center">
+                                                <p>
+                                                    ¿Quieres Cancelar la Reservacion?
+                                                </p>
+
+                                                <button type="button" id="siCancelar" onclick="regresarInicio()">
+                                                    Sí
+                                                </button>
+                        
+                                                <button type="button" id="noCancelar" onclick="ocultarCancelacion()">
+                                                    No
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <div class="col-1 col-md-2"></div> <!-- Agrega espacio de 1 y 2 a la derecha(posicionado por row) -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </section>
+
+            <!-- parte derecha -->
+            <aside class="seccionImagen col-5">
+                <img src="../img/fotos-hotel/formularioImagen.jpg" alt="">
+            </aside>
+
+            
+        </div>
+    </main>
+
+    <footer class="footer-hotel">
+        <div class="container">
+            <div class="seccionesFooter row">
+                <div class="seccionFooter col">
+                    <h3>Hotel Playa Blanca</h3>
+                    <p>Manuel Antonio - Costa Rica</p>
+                </div>
+                <div class="seccionFooter col">
+                    <h3>Contáctanos</h3>
+                    <p>Atendemos sus consultas</p>
+                </div>
+                <div class="seccionFooter col">
+                    <h3>Síguenos</h3>
+                    
+                    <div class="redesSociales">
+                        <a href="https://www.facebook.com/" target="_blank"><!-- target="_blank": abre el enlace en una pestaña nueva -->
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="https://www.whatsapp.com/" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <p class="derechosReservados">
+                © 2026 Hotel Playa Blanca | Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="../js/form.js"></script>
 </body>
 </html>
