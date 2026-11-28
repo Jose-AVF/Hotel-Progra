@@ -5,10 +5,13 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
+    font-family: 'intel',Arial, Helvetica, sans-serif;
+    background-color: #f2f4f8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
-
 
 /* Encabezado */
 .encabezado {
@@ -17,21 +20,20 @@ body {
     box-shadow: 0 3px 12px rgba(0, 60, 80, 0.10);
     position: relative;
     z-index: 100;
+    border-radius: 12px;
 }
 
 /* Contenedor del menú */
 .navbar {
     max-width: 1200px;
     min-height: 110px;
-    margin: 0 auto;
+    margin: auto;
     padding: 10px 25px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 25px;
 }
-
 /* Logo del hotel */
 .logo {
     display: flex;
@@ -48,7 +50,6 @@ body {
 
 /* Lista de navegación */
 .links {
-    list-style: none;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -77,24 +78,8 @@ body {
 
 /* Adaptación para celulares */
 @media (max-width: 850px) {
-    .menu {
-        flex-direction: column;
-        padding: 15px;
-        gap: 12px;
-    }
-
     .logo img {
         width: 220px;
-    }
-
-    .navegacion {
-        justify-content: center;
-        gap: 4px;
-    }
-
-    .navegacion a {
-        font-size: 14px;
-        padding: 10px;
     }
 }
 
@@ -108,37 +93,24 @@ body {
         padding: 9px 8px;
     }
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #f2f4f8;
-    padding: 30px;
-}
-
 /* CONTENEDOR DEL LOGIN */
 .contenido-login {
     flex: 1;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 15px;
-    border: #212529;
+    padding: 50px 15px;
 }
 
 /* TARJETA LOGIN */
 .login-card {
     width: 100%;
     max-width: 400px;
-    background: #ffffffee;
+    background:#ffffff;
     padding: 35px 40px;
     border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0,0.15);
     animation: fade 0.7s ease;
 }
 
@@ -155,14 +127,18 @@ body {
 
 .input-group-text {
     background-color: #f8f9fa;
+    color: #123D56;
+}
+form-control {
+    padding: 11px;
 }
 
 .form-control:focus {
     border-color: #d4a017;
-    box-shadow: 0 0 0 0.15rem rgba(212, 160, 23, .35);
+    box-shadow: 0 0 0 0.15rem rgba(212, 160, 23, 0.35);
 }
 
-/* BOTON */
+/* Boton */
 .btn-login {
     background-color: #d4a017;
     color: white;
@@ -170,6 +146,7 @@ body {
     border-radius: 10px;
     padding: 11px;
     transition: 0.3s;
+    border: none;
 }
 
 .btn-login:hover {
@@ -178,7 +155,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* ERROR */
+/* Error*/
 #error {
     background: #dc3545;
     color: white;
@@ -187,17 +164,20 @@ body {
     font-size: 14px;
 }
 
-/* FOOTER */
+/* Footer o pie de pagina*/
 .footer-hotel {
     background-color: #143e68;
     color: white;
     padding: 30px 0 20px;
     border-top: 3px solid #d4a017;
+    width: 100%;
+    border-radius: 12px;
 }
 
 .footer-hotel h5 {
     color: #d4a017;
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .footer-hotel p {
@@ -214,8 +194,8 @@ body {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     margin: 0 5px;
     background: #d4a017;
     color: white;
