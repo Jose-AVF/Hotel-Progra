@@ -6,7 +6,8 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
+    background-color: #f2f4f8;
+    padding: 20px;
 }
 
 /* Encabezado */
@@ -16,15 +17,16 @@ body {
     box-shadow: 0 3px 12px rgba(0, 60, 80, 0.10);
     position: relative;
     z-index: 100;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 /* Contenedor del menú */
 .navbar {
     max-width: 1200px;
     min-height: 110px;
-    margin: 0 auto;
+    margin: auto;
     padding: 10px 25px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,7 +49,6 @@ body {
 
 /* Lista de navegación */
 .links {
-    list-style: none;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -64,107 +65,82 @@ body {
     font-weight: 600;
     padding: 12px 14px;
     border-radius: 6px;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
-
-/* Efecto al pasar el cursor */
-.navegacion a:hover,
-.navegacion a.activo {
-    color: #ffffff;
-    background-color: #087F91;
+/*habitaciones*/
+#titulo_habi{
+    padding: 30px 15px 15px;
 }
-
+#titulo_habi h2{
+    text-align: center;
+    color: #123D56;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
 /* Adaptación para celulares */
 @media (max-width: 850px) {
-    .menu {
-        flex-direction: column;
-        padding: 15px;
-        gap: 12px;
-    }
-
     .logo img {
         width: 220px;
     }
-
-    .navegacion {
-        justify-content: center;
-        gap: 4px;
-    }
-
-    .navegacion a {
-        font-size: 14px;
-        padding: 10px;
-    }
 }
-
-@media (max-width: 480px) {
-    .navegacion {
-        gap: 3px;
-    }
-
-    .navegacion a {
-        font-size: 13px;
-        padding: 9px 8px;
-    }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #f2f4f8;
-    padding: 30px;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #222;
-}
-
+/*carruseles*/
 .contenedor-carruseles {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 20px;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto 40px;
+    padding: 0 15px;
 }
 
 .carrusel {
     flex: 1;
     min-width: 0;
-    background: white;
-    padding: 15px;
+    background: aquamarine;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px #00000018;
-    overflow: hidden;
 }
 
 .carrusel h2 {
     text-align: center;
     font-size: 20px;
     margin-bottom: 15px;
-    color: #333;
+    color: #123D56;
 }
-
+.carrusel h4 {
+    text-align: center;
+    margin: 20px 0 12px;
+    color: #123D56;
+}
+.carrusel ul{
+    padding-left: 25px;
+    margin-bottom: 25px;
+}
+.carrusel li{
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+/*imagenes de los carruseles*/
 .pista {
     display: flex;
+    width: 100%;
     transition: transform 0.4s ease;
+    }
+.ventana{
+    width: 100%;
+    overflow: hidden;
 }
-
 .pista img {
     width: 100%;
     flex: 0 0 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
+    display: block;
 }
-
+/*controles del carrusel*/
 .controles {
     display: flex;
     justify-content: space-between;
@@ -179,6 +155,7 @@ h1 {
     border-radius: 6px;
     cursor: pointer;
     font-size: 18px;
+    transition: background-color 0.3s;
 }
 
 .controles button:hover {
@@ -195,13 +172,11 @@ h1 {
         width: 100%;
     }
 }
-
+/*boton de reservar*/
 .contenedor-boton {
     display: flex;
     justify-content: center;
-    /* Centra horizontalmente el contenido */
-    align-items: center;
-    width: 100%;
+    margin-top: auto;
 }
 
 /* Estilo para que el enlace parezca un botón interactivo */
@@ -209,26 +184,27 @@ h1 {
     display: inline-block;
     padding: 12px 24px;
     background-color: #007bff;
-    /* Color azul */
     color: white;
     text-decoration: none;
-    /* Quita el subrayado del enlace */
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 /* Efecto visual al pasar el cursor */
 .boton-enlace:hover {
     background-color: #0056b3;
+    color: white;
 }
 
-/* FOOTER */
+/* FOOTER o pie de pagina*/
 .footer-hotel {
     background-color: #143e68;
     color: white;
     padding: 30px 0 20px;
     border-top: 3px solid #d4a017;
+     border-radius: 12px;
+    overflow: hidden;
 }
 
 .footer-hotel h5 {
@@ -253,7 +229,7 @@ h1 {
     width: 30px;
     height: 30px;
     margin: 0 5px;
-    background: #d4a017;
+    background-color: #d4a017;
     color: white;
     border-radius: 50%;
     text-decoration: none;
@@ -261,31 +237,7 @@ h1 {
 }
 
 .redes a:hover {
-    background: white;
+    background-color: white;
     color: #212529;
     transform: translateY(-3px);
-}
-
-/* ANIMACION */
-@keyframes fade {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* CELULARES */
-@media (max-width: 576px) {
-    .login-card {
-        padding: 25px 20px;
-    }
-
-    .navbar-hotel .nav-link {
-        margin-left: 0;
-    }
 }
