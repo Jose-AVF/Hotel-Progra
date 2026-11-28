@@ -1,0 +1,253 @@
+header
+{
+    background-color: #155E63; /* color de fonde del header */
+    padding: 10px; /* Agrega espacio interior alrededor de la barra */
+    border-radius: 10px;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5; /* agrega espacio vertical entre cada linea */
+    
+}
+
+.barraNavegacion
+{
+    display: flex; /* sirve para organizar los elementos, en este caso la imagen pero si hubieran mas elementos, los organizaria */
+    justify-content: center; /* Centra el logo horizontalmente */
+
+    align-items: center; /* Centra el logo verticalmente de la barra */
+    height: 80px; /* Altura de la barra de navegacion */
+}
+
+.barraNavegacion img
+{
+    width: 240px; /* Establece ancho del logo */
+}
+
+.encabezadoForm
+{
+    text-align: center; /* Alineacion de texto */
+    margin-bottom: 25px; /* agrega espacio por fuera del elemento, especificamente en la parte inferior */
+    margin-top: 10px;
+}
+
+.encabezadoForm h1
+{
+    color: #155E63;
+    font-size: 27px;
+}
+
+.encabezadoForm p
+{
+    color: #666;
+    margin-top: 9px;
+}
+
+.contenedorFormulario
+{
+    display: flex;
+    flex-direction: column; /* organiza los elementos uno abajo del otro (Horizontal)*/
+    padding: 20px; /* agrega espacio interior alrededor del contenedor */
+}
+
+.contenidoFormulario
+{
+    padding: 20px; /* crea una pequeña separacion alrededor del formulario, asi tendra una apariencia menos apretada */
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    box-shadow: 0px 5px 8px rgba(16, 16, 16, 0.1);
+    /* 
+        0: desplazamiento horizontal
+        5px: desplazamiento vertical
+        8px: nivel de difuminado
+        rgba: colores, se pueden cambiar con el cursor
+    */
+}
+
+.contenidoFormulario button
+{
+    padding: 10px 20px; /* agrega espacio interior, arriba y abajo / a los lados (10px/20px) */
+    background-color: #155E63;
+    border-radius: 5px;
+    color: white;
+    border: none; /* quita el borde predeterminado de los botones */
+    cursor: pointer; /* aparece una mano señalando y asi mismo esta indica que el elemento es interactivo */
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 10px; /* Espacio a la derecha de cada boton */
+    margin-top: 10px; /* agrega espacio superior */
+    transition: background-color 0.3s ease;
+    /* 
+        transition: hace que pase un cambio visual gradualmente en vez de golpe
+        background-color: indica que queremos animar, en este caso el background
+        0.3: tiempo de la transicion 0.3 s
+        ease: hace que el cambio comience y termine suavemente
+    */
+}
+
+.contenidoFormulario button:hover /* aplica estilos cuando el cursor del mouse esta encima del elemento */
+{
+    background-color: #10494D;
+}
+
+.campo input, .campo select
+{
+    width: 100%; /* hace que los campos y las barras desplegables ocupen el 100% del ancho disponible */
+    padding: 10px; /* agrega espacio interior alrededor del input y select, haciendo que el placeholder quede mas alejado y centrado del input */
+    border: 1px solid #ccc; /* crea un borde gris en el input y select */
+    border-radius: 5px; /* Agrega borde al input y select */
+    box-sizing: border-box; /* Hace que el ancho y la altura del los campos establecidos incluya dentro de ellos el padding y border, haciendo que el input y select no se salgan de su contenedor */
+    font-size: 15px; /* establece el tamaño de la letra en 15 pixeles */
+}
+
+.campo input:focus, .campo select:focus /* focus: aplica estilos a un elemento cuando esta selecionado o activo*/
+{
+    border-color: #155E63; /* color a los bordes pero aun queda predominando el color por defecto */
+    outline: 2px solid #155E63;/* agrega color al borde completo haciendo que predomine el color que seleccione */
+    /* ambos codigos se complementan para darle color al borde cuando lo estemos seleccionando */
+}
+
+.campo
+{
+    margin-bottom: 15px;
+}
+
+.campo label
+{
+    display: block;
+    margin-bottom: 5px; /* agrega espacio entre la etiqueta y el campo */
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+.seccionImagen
+{
+    position: relative; /* usa el contenedor como referencia para posicionar lo que tenga adentro con "position: absolute" */
+}
+
+.seccionImagen img
+{
+    position: absolute; /* sirve para usar propiedades como "left, top, right y bottom" y se puede usar sola pero no es la forma correcta de usarlo */
+    top: 0; /* espacio superior de la imagen con el contenedor */
+    left: 0; /* deja tal cantidad de separacion desde la izquierda */
+    width: 100%; /* con esto hago que la imagen use correctamente el 100% del 40% de ancho que le asignamos */
+    height: 100%; /* hace que ocupe el 100% de la altura de imagen disponible dentro de su contenedor */
+    object-fit: cover; /* hace que se llene el espacio disponible (cover: prioriza llenar el espacio, no mostrar toda la imagen) */
+    border-radius: 0 10px 10px 0;
+    /*
+        0: esquina superior izquierda
+        10px: esquina superior derecha
+        10px: esquina inferior derecha
+        0: esquina inferior izquierda
+    */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    /*
+        0: no desplaza la sombra horizontalmente
+        2px: desplaza la sombra verticalmente
+        8px: difuminado de la sombra
+    */
+}
+
+.paso h2
+{
+    color: #155E63;
+}
+
+.indicadorPaso
+{
+    font-size: 18px;
+    color: #666;
+}
+
+.footer-hotel
+{
+    background-color: #155E63;
+    color: white;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.footer-hotel hr
+{
+    border: none;
+    border-top: 1px solid #ccc; /* 1px: establece el tamaño del hr */
+}
+
+.seccionesFooter
+{
+    text-align: center;
+    margin-bottom: 20px; /* agrega espacio exterior debajo de cada elemento */
+}
+
+.seccionFooter h3
+{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.seccionFooter p
+{
+    margin: 0; /* elimina los margenes exteriores predeterminados */
+    font-size: 15px;
+}
+
+.datosFormulario h3
+{
+    font-weight: bold;
+}
+
+.derechosReservados
+{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.redesSociales
+{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.redesSociales a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#confirmarCancelacion
+{
+    position: fixed; /* fija el elemento permitiendonos usarlo de referencia para la crear la capa que va a cubrir toda la ventana */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    z-index: 1000;
+}
+
+.capaConfirmacion
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ventanaConfirmacion
+{
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+
